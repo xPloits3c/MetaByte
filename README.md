@@ -19,7 +19,6 @@ Clean and Save Unique: URL’s-Email-Phone-IP’s.
 - Duplicate removal for each data type
 - Save results to separate CSVs
 - Support for multiple modes (`email`, `phone`, `ip`, `url`, `all`)
-- Color interface for a more readable CLI experience
 
 ---
 
