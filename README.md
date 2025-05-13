@@ -25,5 +25,46 @@ Clean and Save Unique: URL’s-Email-Phone-IP’s.
 ## Installation
    ```bash
    git clone https://github.com/xPloits3c/MetaByte
+
    pip install -r requirements.txt
+
    cd MetaByte
+```
+
+## Usage
+
+python metabyte.py -f <file.txt> -m <mode>
+
+Available modes:
+• email – Extracts email addresses only
+• phone – Extracts phone numbers only
+• ip – Extracts IP addresses only
+• url – Extracts URLs only
+• all – Extracts everything
+
+## Examples
+
+python metabyte.py -f emails.txt -m email
+python metabyte.py -f atomicurls.txt -m url
+python metabyte.py -f mixeddata.txt -m all
+
+## Output
+
+Data automatically saved to CSV files:
+• email.csv
+• phone.csv
+• ip.csv
+• urls.csv
+
+## Credits
+• Developed by: xPloits3c
+• GitHub: https://github.com/xPloits3c/MetaByte
+• Version: 1.0
+• License: MIT
+
+## TODO (future ideas)
+• IPv6 support
+• JSON export
+• Graphical user interface (GUI)
+• Automatic scanning from folders
+
