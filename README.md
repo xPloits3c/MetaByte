@@ -34,8 +34,9 @@ Clean and Save Unique: URL’s-Email-Phone-IP’s.
 python metabyte.py -f <file.txt> -m <mode>
 
 Available modes:
-• email – Extracts email addresses only
-• phone – Extracts phone numbers only
+
++ • email – Extracts email addresses only
++ • phone – Extracts phone numbers only
 • ip – Extracts IP addresses only
 • url – Extracts URLs only
 • all – Extracts everything
@@ -43,6 +44,7 @@ Available modes:
 ## Examples
 
 python metabyte.py -f emails.txt -m email
+
 python metabyte.py -f atomicurls.txt -m url
 python metabyte.py -f mixeddata.txt -m all
 
