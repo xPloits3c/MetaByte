@@ -47,7 +47,7 @@ Available modes:
 
 + python metabyte.py -f emails.txt -m email
 + python metabyte.py -f atomicurls.txt -m url
-+ python metabyte.py -f mixeddata.txt -m all
++ python metabyte.py -f mixdata.txt -m all
   
 ![image](https://github.com/user-attachments/assets/7b7fba9e-cf5c-4450-aa97-13ee98916139)
 
