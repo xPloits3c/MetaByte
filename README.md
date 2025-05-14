@@ -7,6 +7,8 @@ Clean and Save Unique: URL’s-Email-Phone-IP’s.
 
 [+] Supports **emails**, **phone numbers**, **IPs**, and **URLs** detection, with automatic duplicate removal and saving to CSV files.
 
+![image](https://github.com/user-attachments/assets/6ea17898-c5f0-44e4-9b8f-c34140ad4bbb)
+
 ---
 
 ## Features
