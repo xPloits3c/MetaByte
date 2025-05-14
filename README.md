@@ -26,7 +26,7 @@ Clean and Save Unique: URL’s-Email-Phone-IP’s.
 
 ## Installation
    ```bash
-   git clone https://github.com/xPloits3c/MetaByte
+   git clone https://github.com/xPloits3c/MetaByte.git
    pip install -r requirements.txt
    cd MetaByte
 ```
