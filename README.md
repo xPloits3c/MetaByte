@@ -3,9 +3,9 @@ Clean and Save Unique: URL’s-Email-Phone-IP’s.
 
  ![Repo View Counter](https://profile-counter.glitch.me/MetaByte/count.svg)
  
-[+] MetaByte is an advanced parsing script for extracting, cleaning and saving sensitive information from `.txt` files.
+MetaByte is an advanced parsing script for extracting, cleaning and saving sensitive information from `.txt` files.
 
-[+] Supports **emails**, **phone numbers**, **IPs**, and **URLs** detection, with automatic duplicate removal and saving to CSV files.
+Supports **emails**, **phone numbers**, **IPs**, and **URLs** detection, with automatic duplicate removal and saving to CSV files.
 
 ![image](https://github.com/user-attachments/assets/6ea17898-c5f0-44e4-9b8f-c34140ad4bbb)
 
