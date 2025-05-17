@@ -24,6 +24,8 @@ Supports **emails**, **phone numbers**, **IPs**, and **URLs** detection, with au
 
 ---
 
+![results_all](https://github.com/user-attachments/assets/7f1366bd-c5b5-4489-8149-b76c9a8bcaf2)
+
 ## Installation
    ```bash
    git clone https://github.com/xPloits3c/MetaByte.git
