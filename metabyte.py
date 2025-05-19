@@ -30,7 +30,7 @@ def estrai_url(contenuto):
     return sorted(set(urls))
 
 def salva_csv_separato(dati, filename, intestazione):
-    with open(filename, 'w', newline='') as csvfile:
+    with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow([intestazione])
         for elemento in dati:
