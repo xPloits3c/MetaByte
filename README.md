@@ -18,9 +18,10 @@ Supports **emails**, **phone numbers**, **IPs**, and **URLs** detection, with au
 - Phone numbers
 - IP addresses (IPv4)
 - Full URLs (HTTP/HTTPS)
+- Full URLs with parameters, example: `id=1`, `.php?catid`
 - Duplicate removal for each data type
 - Save results to separate CSVs
-- Support for multiple modes (`email`, `phone`, `ip`, `url`, `all`)
+- Support for multiple modes (`email`, `phone`, `ip`, `url`, `urlparams`, `all`)
 
 ---
 
