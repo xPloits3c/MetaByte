@@ -29,8 +29,8 @@ Supports **emails**, **phone numbers**, **IPs**, and **URLs** detection, with au
 ## Installation
    ```bash
    git clone https://github.com/xPloits3c/MetaByte.git
-   pip install -r requirements.txt
    cd MetaByte
+   pip install -r requirements.txt
 ```
 
 ## Usage
