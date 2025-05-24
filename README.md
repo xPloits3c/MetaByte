@@ -54,8 +54,7 @@ Available modes:
 + python3 metabyte.py -f urls.txt -m urlparams --filter id,token
 - ES: `python3 metabyte.py -f urls.txt -m urlparams --filter .php?id`
   
-![mb_h](https://github.com/user-attachments/assets/e6993d56-9bda-4f92-8362-f52be785f751)
-
+![mb_h](https://github.com/user-attachments/assets/450329e5-9cf8-4844-9f27-992293dbe7b4)
 
 ## Output
 
