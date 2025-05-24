@@ -64,11 +64,13 @@ Data automatically saved to CSV files:
 + phone.csv
 + ip.csv
 + urls.csv
++ urls_with_params.csv
 
 ## Credits
 + Developed by: xPloits3c
 + GitHub: https://github.com/xPloits3c/MetaByte
-+ Version: 1.0
++ Mail me: whitehat.report@onionmail.org
++ Version: 1.2
 + License: MIT
 
 ## TODO (future ideas)
