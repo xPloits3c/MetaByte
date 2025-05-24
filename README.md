@@ -13,7 +13,7 @@ Supports **emails**, **phone numbers**, **IPs**, and **URLs** detection, with au
 
 ## Features
 
-- Automatic extraction of:
+> Automatic extraction of:
 - Emails
 - Phone numbers
 - IP addresses (IPv4)
