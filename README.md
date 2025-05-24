@@ -43,13 +43,16 @@ Available modes:
 +  phone – Extracts phone numbers only
 + ip – Extracts IP addresses only
 + url – Extracts URLs only
++ urlparams - With Params Only
 + all – Extracts everything
 
 ## Examples
 
-+ python metabyte.py -f emails.txt -m email
-+ python metabyte.py -f atomicurls.txt -m url
-+ python metabyte.py -f mixdata.csv -m all
++ python3 metabyte.py -f emails.txt -m email
++ python3 metabyte.py -f atomicurls.txt -m url
++ python3 metabyte.py -f mixdata.csv -m all
++ python3 metabyte.py -f urls.txt -m urlparams --filter id,token
+- ES: `python3 metabyte.py -f urls.txt -m urlparams --filter .php?id`
   
 ![image](https://github.com/user-attachments/assets/7b7fba9e-cf5c-4450-aa97-13ee98916139)
 
