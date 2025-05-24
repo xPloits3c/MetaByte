@@ -55,7 +55,7 @@ Available modes:
 
 ## Output
 
-Data automatically saved to CSV files:s
+Data automatically saved to CSV files:
 + email.csv
 + phone.csv
 + ip.csv
