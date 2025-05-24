@@ -1,5 +1,5 @@
-# _xPloits3c_MetaByte_v1.2
-
+# _xPloits3x
+# MetaByte_v1.2
 import re
 import argparse
 import os
@@ -64,6 +64,7 @@ def esegui_pulizia(file_path, mode, filtri=None):
 
     if mode in ['email', 'all']:
         email_list = estrai_email(contenuto)
+        print("\033[91m      ᴹᵉᵗᵃᴮʸᵗᵉ_ⱽ¹ˑ²_ᵇʸ_ˣᴾˡᵒⁱᵗˢ³ᶜ \033[0m\n")
         print(Fore.GREEN + f"[✓] {len(email_list)} Unique emails found.")
         if email_list:
             salva_csv_separato(email_list, 'email.csv', 'Email')
@@ -73,7 +74,7 @@ def esegui_pulizia(file_path, mode, filtri=None):
         phone_list = estrai_telefono(contenuto)
         print(Fore.GREEN + f"[✓] {len(phone_list)} Unique phone numbers found.")
         if phone_list:
-            salva_csv_separato(phone_list, 'phone.csv', 'Telefono')
+            salva_csv_separato(phone_list, 'phone.csv', 'PhoneNr')
             print(Fore.CYAN + "[✓] Phone nr. saved in 'phone.csv'.")
 
     if mode in ['ip', 'all']:
@@ -118,7 +119,7 @@ Description:
     - phone.csv
     - ip.csv
     - urls.csv
-    - urls_with_params.csv (filtered if --filter used) ES: .php?id
+    - urls_with_params.csv (filtered if --filter used)
 
 Examples:
   - python3 metabyte.py -f emails.txt -m email
@@ -127,8 +128,8 @@ Examples:
   - python3 metabyte.py -f full_data.txt -m all
 ---------------------------------------------
 
-[+] _xPloits3c_V_1.2
-[+] GitHub: https://github.com/xPloits3c/MetaByte
+        \033[91m   ᴹᵉᵗᵃᴮʸᵗᵉ_ⱽ¹ˑ²_ᵇʸ_ˣᴾˡᵒⁱᵗˢ³ᶜ \033[0m\n
+\033[93m  [!]GitHub: https://github.com/xPloits3c/MetaByte \033[0m\n
 """)
 
 if __name__ == "__main__":
