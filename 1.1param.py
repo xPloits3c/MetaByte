@@ -1,4 +1,4 @@
-# _xPloits3x_ - MetaByte v1.1 (URL Parameters support)
+# _xPloits3x_ - MetaByte v1.1
 
 import re
 import argparse
