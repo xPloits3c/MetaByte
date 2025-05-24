@@ -1,4 +1,4 @@
-# _xPloits3x_ - MetaByte v1.1
+# _xPloits3x_ - MetaByte v1.2 (Filtro URL con parametri specifici)
 
 import re
 import argparse
@@ -29,10 +29,21 @@ def estrai_url(contenuto):
     urls = re.findall(url_pattern, contenuto)
     return sorted(set(urls))
 
-def estrai_url_con_parametri(contenuto):
+def estrai_url_con_parametri(contenuto, filtri=None):
     pattern = r'https?://[^\s\'",)]+\?[^\s\'",)]+=[^\s\'",)]+'
     url_param = re.findall(pattern, contenuto)
-    return sorted(set(url_param))
+    url_unici = sorted(set(url_param))
+
+    if filtri:
+        parametri = [f.strip().lower() for f in filtri]
+        url_filtrati = []
+        for url in url_unici:
+            for p in parametri:
+                if f"{p}=" in url.lower():
+                    url_filtrati.append(url)
+                    break
+        return url_filtrati
+    return url_unici
 
 def salva_csv_separato(dati, filename, intestazione):
     with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
@@ -41,7 +52,7 @@ def salva_csv_separato(dati, filename, intestazione):
         for elemento in dati:
             writer.writerow([elemento])
 
-def esegui_pulizia(file_path, mode):
+def esegui_pulizia(file_path, mode, filtri=None):
     if not os.path.exists(file_path):
         print(Fore.RED + f"[!] The file '{file_path}' does not exist!")
         return
@@ -80,7 +91,7 @@ def esegui_pulizia(file_path, mode):
             print(Fore.CYAN + "[✓] URLs saved in 'urls.csv'.")
 
     if mode in ['urlparams', 'all']:
-        url_params_list = estrai_url_con_parametri(contenuto)
+        url_params_list = estrai_url_con_parametri(contenuto, filtri)
         print(Fore.GREEN + f"[✓] {len(url_params_list)} URLs with parameters found.")
         if url_params_list:
             salva_csv_separato(url_params_list, 'urls_with_params.csv', 'URL con Parametri')
@@ -92,11 +103,12 @@ def esegui_pulizia(file_path, mode):
 def mostra_help():
     print(Fore.CYAN + """
 Usage:
-  python metabyte.py -f <file.txt> -m <email|phone|ip|url|urlparams|all>
+  python metabyte.py -f <file.txt> -m <email|phone|ip|url|urlparams|all> [--filter id,token]
 
 Options:
-  -f, --file       Input files to analyze
+  -f, --file       Input file to analyze
   -m, --mode       Mode: email, phone, ip, url, urlparams, all
+  --filter         Comma-separated parameter filters (only for urlparams mode)
   -h, --help       Show this help message
 
 Description:
@@ -106,24 +118,25 @@ Description:
     - phone.csv
     - ip.csv
     - urls.csv
-    - urls_with_params.csv
+    - urls_with_params.csv (filtered if --filter used)
 
 Examples:
   - python3 metabyte.py -f emails.txt -m email
-  - python3 metabyte.py -f atomicurls.txt -m url
-  - python3 metabyte.py -f links.txt -m urlparams
-  - python3 metabyte.py -f data.txt -m all
+  - python3 metabyte.py -f urls.txt -m url
+  - python3 metabyte.py -f urls.txt -m urlparams --filter id,token
+  - python3 metabyte.py -f full_data.txt -m all
 ---------------------------------------------
 
 [+] _xPloits3c_
 [+] GitHub: https://github.com/xPloits3c/MetaByte
-[+] Version 1.1
+[+] Version 1.2
 """)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument('-f', '--file', help="File di input")
     parser.add_argument('-m', '--mode', help="Modalità: email, phone, ip, url, urlparams, all")
+    parser.add_argument('--filter', help="Filtra URL con specifici parametri (es: id,token)")
     parser.add_argument('-h', '--help', action='store_true')
 
     args = parser.parse_args()
@@ -131,4 +144,5 @@ if __name__ == "__main__":
     if args.help or not args.file or not args.mode:
         mostra_help()
     else:
-        esegui_pulizia(args.file, args.mode.lower())
+        filtri = args.filter.split(",") if args.filter else None
+        esegui_pulizia(args.file, args.mode.lower(), filtri)
