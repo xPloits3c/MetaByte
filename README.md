@@ -1,7 +1,5 @@
 # MetaByte
 Clean and Save Unique: URL’s-Email-Phone-IP’s.
-
- ![Repo View Counter](https://profile-counter.glitch.me/MetaByte/count.svg)
  
 MetaByte is an advanced parsing script for extracting and removing duplicate.
 
