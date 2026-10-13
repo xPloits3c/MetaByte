@@ -1,0 +1,4 @@
+amazonaws.com
+amazon.com
+bing.com
+google.com
